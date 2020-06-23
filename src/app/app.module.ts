@@ -19,7 +19,6 @@ import { B2cStorefrontModule } from '@spartacus/storefront';
         }
       },
       context: {
-        baseSite: ['electronics-spa']
       },
       i18n: {
         resources: translations,
