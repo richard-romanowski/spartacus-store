@@ -4,10 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { translations, translationChunksConfig } from '@spartacus/assets';
 import { B2cStorefrontModule } from '@spartacus/storefront';
+import { StaticPageComponent } from './static-page/static-page.component';
+import { CustomRoutingModule } from './custom-routing/custom-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StaticPageComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +22,10 @@ import { B2cStorefrontModule } from '@spartacus/storefront';
         }
       },
       context: {
+        baseSite: ['electronics-spa'],
+        currency: ['USD'],
+        language: ['en'],
+        urlParameters: ['customParam', 'baseSite', 'language', 'currency']
       },
       i18n: {
         resources: translations,
@@ -28,7 +35,8 @@ import { B2cStorefrontModule } from '@spartacus/storefront';
       features: {
         level: '2.0'
       }
-    })
+    }),
+    CustomRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
