@@ -5,7 +5,11 @@ import { StaticPageComponent } from '../static-page/static-page.component';
 import { CmsPageGuard } from '@spartacus/storefront';
 
 const STATIC_ROUTES: Routes = [
-  { path: 'static-page', component: StaticPageComponent, canActivate: [CmsPageGuard] }
+  {
+    path: 'static-page', component: StaticPageComponent, canActivate: [CmsPageGuard],
+    data: { pageLabel: 'cart' }
+
+  }
 ];
 
 @NgModule({
