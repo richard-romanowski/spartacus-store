@@ -19,9 +19,9 @@ import { B2cStorefrontModule } from '@spartacus/storefront';
         }
       },
       context: {
-        baseSite: ['electronics-spa'],
-        customParam: ['test'],
-        urlParameters: ['customParam', 'baseSite', 'language', 'currency']
+        // baseSite: ['electronics-spa'],
+        // customParam: ['test'],
+        // urlParameters: ['customParam', 'baseSite', 'language', 'currency']
       },
       i18n: {
         resources: translations,
