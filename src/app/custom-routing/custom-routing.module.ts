@@ -2,13 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { StaticPageComponent } from '../static-page/static-page.component';
-import { CmsPageGuard } from '@spartacus/storefront';
+import { CmsPageGuard, PageLayoutComponent } from '@spartacus/storefront';
 
 const STATIC_ROUTES: Routes = [
   {
-    path: 'static-page', component: StaticPageComponent, canActivate: [CmsPageGuard],
-    data: { pageLabel: 'cart' }
-
+    path: 'static-page',
+    component: StaticPageComponent,
+    data: { pageLabel: 'cart' },
+    canActivate: [CmsPageGuard]
+  },
+  {
+    path: 'alias/hilfe',
+    component: PageLayoutComponent,
+    data: { pageLabel: '/faq' },
+    canActivate: [CmsPageGuard]
   }
 ];
 
