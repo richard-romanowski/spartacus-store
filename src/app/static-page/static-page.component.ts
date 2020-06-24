@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActiveCartService, OrderEntry } from '@spartacus/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-static-page',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StaticPageComponent implements OnInit {
 
-  constructor() { }
+  orderEntries$: Observable<OrderEntry[]> = this.cartService.getEntries(); 
+  constructor(private cartService: ActiveCartService) { }
 
   ngOnInit(): void {
   }
