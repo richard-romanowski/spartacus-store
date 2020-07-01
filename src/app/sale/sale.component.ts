@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CmsService } from '@spartacus/core';
 
 @Component({
   selector: 'app-sale',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SaleComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cmsSewrvice: CmsService) { }
 
   ngOnInit(): void {
+    this.cmsSewrvice.getCurrentPage().subscribe(console.log);
   }
 
 }
