@@ -1,11 +1,23 @@
 # SpartacusStore
 
 
+
+
+
 exercises for openSAP course Routing in Spartacus
 
 https://open.sap.com/courses/sparta1/items/tzwszvXDjlwONtE5xXVUl 
 
 The course is conducted by Mateusz Ostafil and runs June 16, 2020 - July 15, 2020
+
+Unit 4
+static page:
+http://localhost:4200/electronics-spa/en/USD/static-page
+alias
+http://localhost:4200/electronics-spa/en/USD/alias/hilfe
+editin sale page 
+http://localhost:4200/electronics-spa/en/USD/sale   (the sale link is not present in page header  )
+
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
