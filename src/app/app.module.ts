@@ -6,11 +6,13 @@ import { translations, translationChunksConfig } from '@spartacus/assets';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { StaticPageComponent } from './static-page/static-page.component';
 import { CustomRoutingModule } from './custom-routing/custom-routing.module';
+import { SaleComponent } from './sale/sale.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StaticPageComponent
+    StaticPageComponent,
+    SaleComponent
   ],
   imports: [
     BrowserModule,
