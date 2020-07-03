@@ -7,6 +7,8 @@ import { B2cStorefrontModule } from '@spartacus/storefront';
 import { StaticPageComponent } from './static-page/static-page.component';
 import { CustomRoutingModule } from './custom-routing/custom-routing.module';
 import { SaleComponent } from './sale/sale.component';
+import { ProductNameNormalizer } from './product-name.normalizer';
+import { PRODUCT_NORMALIZER } from '@spartacus/core';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { SaleComponent } from './sale/sale.component';
     }),
     CustomRoutingModule
   ],
-  providers: [],
+  providers: [
+    { provide: PRODUCT_NORMALIZER, useClass: ProductNameNormalizer, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
