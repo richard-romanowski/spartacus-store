@@ -8,9 +8,9 @@ export class ProductNameNormalizer implements Converter<Occ.Product, Product> {
 
   constructor() { }
 
-  convert(source: Occ.Product, target?: Product): Product {
+  convert(source: Occ.Product, target?: any): any {
     if (source.name) {
-      target.name = source.name.replace(/ /g, '-');
+      target.nameForUrl = source.name.replace(/ /g, '-');
     }
     return target;
   }

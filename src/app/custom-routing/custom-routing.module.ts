@@ -37,8 +37,8 @@ const STATIC_ROUTES: Routes = [
         routes: {
           product: {
             paths: [
-              'electronics/cameras/:manufacturer/:productCode/:name',
-              'electronics/cameras/:productCode/:name',
+              'electronics/cameras/:manufacturer/:productCode/:nameForUrl',
+              'electronics/cameras/:productCode/:nameForUrl',
               'electronics/cameras/:productCode'
             ]
           }
