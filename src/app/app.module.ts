@@ -9,6 +9,7 @@ import { CustomRoutingModule } from './custom-routing/custom-routing.module';
 import { SaleComponent } from './sale/sale.component';
 import { ProductNameNormalizer } from './product-name.normalizer';
 import { PRODUCT_NORMALIZER } from '@spartacus/core';
+import { ProductCategoryNormalizer } from './product-category.normalizer';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { PRODUCT_NORMALIZER } from '@spartacus/core';
     CustomRoutingModule
   ],
   providers: [
-    { provide: PRODUCT_NORMALIZER, useClass: ProductNameNormalizer, multi: true }
+    { provide: PRODUCT_NORMALIZER, useClass: ProductNameNormalizer, multi: true },
+    { provide: PRODUCT_NORMALIZER, useClass: ProductCategoryNormalizer, multi: true },
   ],
   bootstrap: [AppComponent]
 })
