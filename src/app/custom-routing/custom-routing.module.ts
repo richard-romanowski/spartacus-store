@@ -53,7 +53,7 @@ const STATIC_ROUTES: Routes = [
             // tslint:disable:max-line-length
             productSearch: 'products/search?fields=products(code,name,categories,manufacturer,summary,price(FULL),images(DEFAULT),stock(FULL),averageRating,variantOptions),facets,breadcrumbs,pagination(DEFAULT),sorts(DEFAULT),freeTextSearch,currentQuery',
             product: {
-              list: 'products/${productCode}?fields=code,name,categories,manufacturer,summary,price(formattedValue),images(DEFAULT,galleryIndex)',
+              list: 'products/${productCode}?fields=FULL',
             }
           },
         },
