@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { StaticPageComponent } from '../static-page/static-page.component';
 import { CmsPageGuard, PageLayoutComponent } from '@spartacus/storefront';
 import { SaleComponent } from '../sale/sale.component';
+import { ConfigModule, RoutingConfig, OccConfig } from '@spartacus/core';
 
 const STATIC_ROUTES: Routes = [
   {
@@ -30,7 +31,36 @@ const STATIC_ROUTES: Routes = [
   declarations: [],
   imports: [
     CommonModule,
-    RouterModule.forChild(STATIC_ROUTES)
+    RouterModule.forChild(STATIC_ROUTES),
+    ConfigModule.withConfig({
+      routing: {
+        routes: {
+          product: {
+            paths: [
+              'electronics/cameras/:allCategories/:manufacturer/:productCode/:name',
+              'electronics/cameras/:firstCategory/:manufacturer/:productCode/:name',
+              'electronics/cameras/:manufacturer/:productCode/:name',
+              'electronics/cameras/:productCode/:name',
+              'electronics/cameras/:productCode'
+            ],
+            paramsMapping: { name: 'nameForUrl' }
+          }
+        }
+      }
+    } as RoutingConfig),
+    ConfigModule.withConfig({
+      backend: {
+        occ: {
+          endpoints: {
+            // tslint:disable:max-line-length
+            productSearch: 'products/search?fields=products(code,name,categories,manufacturer,summary,price(FULL),images(DEFAULT),stock(FULL),averageRating,variantOptions),facets,breadcrumbs,pagination(DEFAULT),sorts(DEFAULT),freeTextSearch,currentQuery',
+            product: {
+              list: 'products/${productCode}?fields=FULL',
+            }
+          },
+        },
+      },
+    } as OccConfig)
   ]
 })
 export class CustomRoutingModule { }
