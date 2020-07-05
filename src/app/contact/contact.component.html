@@ -1,4 +1,5 @@
 <p>contact works!</p>
 
 <a routerLink="/electronics/cameras/Samsung/1981414/pl60-pink">Product</a>
-
+<br />
+<a [routerLink]="{ cxRoute: 'product', params: { code: '1981414' } } | cxUrl"  >Product</a>
