@@ -11,6 +11,7 @@ import { ProductNameNormalizer } from './product-name.normalizer';
 import { PRODUCT_NORMALIZER } from '@spartacus/core';
 import { ProductCategoryNormalizer } from './product-category.normalizer';
 import { ContactComponent } from './contact/contact.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ContactComponent } from './contact/contact.component';
         level: '2.0'
       }
     }),
-    CustomRoutingModule
+    CustomRoutingModule,
+    RouterModule
   ],
   providers: [
     { provide: PRODUCT_NORMALIZER, useClass: ProductNameNormalizer, multi: true },
