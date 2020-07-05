@@ -10,12 +10,14 @@ import { SaleComponent } from './sale/sale.component';
 import { ProductNameNormalizer } from './product-name.normalizer';
 import { PRODUCT_NORMALIZER } from '@spartacus/core';
 import { ProductCategoryNormalizer } from './product-category.normalizer';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StaticPageComponent,
-    SaleComponent
+    SaleComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
