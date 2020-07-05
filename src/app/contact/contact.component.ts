@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RoutingService } from '@spartacus/core';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private routingService: RoutingService) { }
 
   ngOnInit(): void {
   }
+
+  goToRandomProduct() {
+    this.routingService.go({
+      cxRoute: 'product',
+      params: { code: '1981414', nameForUrl: 'pl60-pink' }
+     });
+  }
+
 
 }
