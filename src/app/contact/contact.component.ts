@@ -20,12 +20,16 @@ export class ContactComponent implements OnInit {
         filter(res => res.hasOwnProperty('products')),
         pluck('products'),
         take(1)
-      ).
-      subscribe(console.log);
-    // this.routingService.go({
-    //   cxRoute: 'product',
-    //   params: { code: '1981414', nameForUrl: 'pl60-pink' }
-    //  });
+      )
+      .subscribe((products: any[]) => {
+        console.log(products);
+        const randomProduct = products[Math.floor(Math.random() * products.length)];
+        console.log(randomProduct);
+        this.routingService.go({
+          cxRoute: 'product',
+          params: { code: randomProduct.code, nameForUrl: randomProduct.nameForUrl }
+        });
+      });
   }
 
 
