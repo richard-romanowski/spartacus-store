@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RoutingService, ProductSearchService } from '@spartacus/core';
-import { filter } from 'rxjs/operators'
+import { filter, pluck } from 'rxjs/operators'
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -17,7 +17,8 @@ export class ContactComponent implements OnInit {
     this.productSearchService.search('cam');
     this.productSearchService.getResults().
       pipe(
-        filter(res => res.hasOwnProperty('products'))
+        filter(res => res.hasOwnProperty('products')),
+        pluck('products')
       ).
       subscribe(console.log);
     // this.routingService.go({
