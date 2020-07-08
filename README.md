@@ -10,6 +10,11 @@ https://open.sap.com/courses/sparta1/items/tzwszvXDjlwONtE5xXVUl
 
 The course is conducted by Mateusz Ostafil and runs June 16, 2020 - July 15, 2020
 
+Unit 7
+exercise 1
+I created the contact component in unit 3, so I created a component about instead. 
+http://localhost:4200/electronics-spa/en/USD/about
+
 Unit 6
 the course uses http://localhost:4200/electronics-spa/en/USD/sale page is used to demonstrate router links. The sale link dosnt exits in header.
 http://localhost:4200/electronics-spa/en/USD/contact is going to be used in unit 6

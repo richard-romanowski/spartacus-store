@@ -6,6 +6,7 @@ import { CmsPageGuard, PageLayoutComponent } from '@spartacus/storefront';
 import { SaleComponent } from '../sale/sale.component';
 import { ConfigModule, RoutingConfig, OccConfig } from '@spartacus/core';
 import { ContactComponent } from '../contact/contact.component';
+import { AboutComponent } from '../about/about.component';
 
 const STATIC_ROUTES: Routes = [
   {
@@ -30,6 +31,12 @@ const STATIC_ROUTES: Routes = [
     path: 'contact',
     component: ContactComponent,
     data: { pageLabel: '/contact' },
+    canActivate: [CmsPageGuard]
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+    data: { pageLabel: '/faq' },
     canActivate: [CmsPageGuard]
   }
 ];

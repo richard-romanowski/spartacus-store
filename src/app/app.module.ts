@@ -12,13 +12,15 @@ import { PRODUCT_NORMALIZER, UrlModule } from '@spartacus/core';
 import { ProductCategoryNormalizer } from './product-category.normalizer';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StaticPageComponent,
     SaleComponent,
-    ContactComponent
+    ContactComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
