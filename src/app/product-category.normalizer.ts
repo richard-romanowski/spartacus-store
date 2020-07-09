@@ -33,6 +33,7 @@ export class ProductCategoryNormalizer implements Converter<Occ.Product, Product
       target.allCategories = allCategories.replace(/ /g, '-').toLowerCase();
       target.firstCategory = source.categories[0].name.replace(/ /g, '-').toLowerCase();
       target.twoCategories = twoCategories.replace(/ /g, '-').toLowerCase();
+      target.manufacturer = source.manufacturer.toLowerCase();
     }
     return target;
   }
