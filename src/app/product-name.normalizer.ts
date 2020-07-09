@@ -10,7 +10,7 @@ export class ProductNameNormalizer implements Converter<Occ.Product, Product> {
 
   convert(source: Occ.Product, target?: any): any {
     if (source.name) {
-      target.nameForUrl = source.name.replace(/ /g, '-').toLowerCase();
+      target.nameForUrl = source.name.replace(/ /g, '-').toLowerCase().substring(0, 10);
     }
     return target;
   }
