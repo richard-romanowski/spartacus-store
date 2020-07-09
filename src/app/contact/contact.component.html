@@ -1,9 +1,12 @@
 <p>contact works!</p>
 
-<a routerLink="/electronics/cameras/Samsung/1981414/pl60-pink">Product</a>
+<a routerLink="/electronics/cameras/Samsung/1981414/pl60-pink">Product hardcoded</a>
 <br />
-<a [routerLink]="{ cxRoute: 'product', params: { code: '1981414', nameForUrl: 'pl60-pink' } } | cxUrl"  >Product</a>
+<a [routerLink]="{ cxRoute: 'product', params: { code: '1981414', nameForUrl: 'pl60-pink' } } | cxUrl"  >pl60-pink cxRoute with code and nameForUrl</a>
 <br>
 <button type="button" (click)="goToRandomProduct()">I'm feeling lucky! </button>
 <br>
 <a [routerLink]="{ cxRoute: 'cart' } | cxUrl"  >Cart</a>
+<br />
+<a [routerLink]="{ cxRoute: 'product', params: { twoCategories: 'digital-compacts-hp', code: '300938', nameForUrl: 'photosmart', manufacturer: 'hp'  } } | cxUrl"  >Product with two categories, code, nameForUrl, and, manufacturer</a>
+<br />
