@@ -51,12 +51,12 @@ const STATIC_ROUTES: Routes = [
         routes: {
           product: {
             paths: [
-              'electronics/cameras/:twoCategories/:productCode/:name/:manufacturer',
-              'electronics/cameras/:allCategories/:manufacturer/:productCode/:name',
-              'electronics/cameras/:firstCategory/:manufacturer/:productCode/:name',
-              'electronics/cameras/:manufacturer/:productCode/:name',
-              'electronics/cameras/:productCode/:name',
-              'electronics/cameras/:productCode'
+              'oldshool/cameras/:twoCategories/:productCode/:name/:manufacturer',
+              'oldshool/cameras/:allCategories/:manufacturer/:productCode/:name',
+              'oldshool/cameras/:firstCategory/:manufacturer/:productCode/:name',
+              'oldshool/cameras/:manufacturer/:productCode/:name',
+              'oldshool/cameras/:productCode/:name',
+              'oldshool/cameras/:productCode'
             ],
             paramsMapping: { name: 'nameForUrl' }
           }
