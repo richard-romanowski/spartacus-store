@@ -2,8 +2,6 @@
 
 
 
-
-
 exercises for openSAP course Routing in Spartacus
 
 https://open.sap.com/courses/sparta1/items/tzwszvXDjlwONtE5xXVUl 
@@ -14,6 +12,11 @@ Unit 7
 exercise 1
 I created the contact component in unit 3, so I created a component about instead. 
 http://localhost:4200/electronics-spa/en/USD/about
+
+exercise 3 
+followed Mateusz's solution
+http://localhost:4200/electronics-spa/en/USD/recently-bought
+
 
 Unit 6
 the course uses http://localhost:4200/electronics-spa/en/USD/sale page is used to demonstrate router links. The sale link dosnt exits in header.

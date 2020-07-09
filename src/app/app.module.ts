@@ -13,6 +13,7 @@ import { ProductCategoryNormalizer } from './product-category.normalizer';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { RecentlyBoughtComponent } from './recently-bought/recently-bought.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AboutComponent } from './about/about.component';
     StaticPageComponent,
     SaleComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    RecentlyBoughtComponent
   ],
   imports: [
     BrowserModule,
