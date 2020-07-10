@@ -7,6 +7,7 @@ import { SaleComponent } from '../sale/sale.component';
 import { ConfigModule, RoutingConfig, OccConfig } from '@spartacus/core';
 import { ContactComponent } from '../contact/contact.component';
 import { AboutComponent } from '../about/about.component';
+import { RecentlyBoughtComponent } from '../recently-bought/recently-bought.component';
 
 const STATIC_ROUTES: Routes = [
   {
@@ -37,6 +38,11 @@ const STATIC_ROUTES: Routes = [
     path: 'about',
     component: AboutComponent,
     data: { pageLabel: '/faq' },
+    canActivate: [CmsPageGuard]
+  },
+  {
+    path: 'recently-bought',
+    component: RecentlyBoughtComponent,
     canActivate: [CmsPageGuard]
   }
 ];
