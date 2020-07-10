@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Product } from '@spartacus/core';
+import { RecentlyBoughtService } from '../recently-bought.service';
 
 @Component({
   selector: 'app-recently-bought',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecentlyBoughtComponent implements OnInit {
 
-  constructor() { }
+  recentlyBought$: Observable<Product[]>;
+
+  constructor(private recentlyBoughtServices: RecentlyBoughtService) { }
 
   ngOnInit(): void {
+    this.recentlyBought$ = this.recentlyBoughtServices.getRecentlyBought();
   }
 
 }

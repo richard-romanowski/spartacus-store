@@ -1,1 +1,27 @@
-<p>recently-bought works!</p>
+<div class="container">
+  <ol>
+    <li *ngFor="let product of recentlyBought$ | async">
+      <a
+        [routerLink]="
+          {
+            cxRoute: 'product',
+            params: {
+              twoCategories: product.twoCategories,
+              code: product.code,
+              nameForUrl: product.nameForUrl,
+              manufacturer: product.manufacturer
+            }
+          } | cxUrl
+        "
+        >{{ product.name }}</a
+      >
+    </li>
+  </ol>
+
+  <hr />
+  <ol>
+    <li *ngFor="let product of recentlyBought$ | async">
+      <pre> {{ product | json }} </pre>
+    </li>
+  </ol>
+</div>
