@@ -35,7 +35,7 @@ http://localhost:4200/electronics-spa/en/USD/sale   (the sale link is not presen
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
 ## test run
-https://stackblitz.com/github/richard-romanowski/spartacus-store/tree/master
+https://stackblitz.com/github/richard-romanowski/spartacus-store/tree/master 
 https://stackblitz.com/github/richard-romanowski/spartacus-store/tree/develop
 https://stackblitz.com/github/richard-romanowski/spartacus-store/tree/feature/unit7-exercise1-contact-component
 https://stackblitz.com/github/richard-romanowski/spartacus-store/tree/feature/unit7-exercise2-routes
