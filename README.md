@@ -36,13 +36,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## test run
 https://stackblitz.com/github/richard-romanowski/spartacus-store/tree/master 
+
 https://stackblitz.com/github/richard-romanowski/spartacus-store/tree/develop
+
 https://stackblitz.com/github/richard-romanowski/spartacus-store/tree/feature/unit7-exercise1-contact-component
+
 https://stackblitz.com/github/richard-romanowski/spartacus-store/tree/feature/unit7-exercise2-routes
+
 https://stackblitz.com/github/richard-romanowski/spartacus-store/tree/feature/unit7-exercise3-router-links
+
 https://stackblitz.com/github/richard-romanowski/spartacus-store/tree/feature/week1Unit4add-content-pages
+
 https://stackblitz.com/github/richard-romanowski/spartacus-store/tree/feature/week1unit3setup
+
 https://stackblitz.com/github/richard-romanowski/spartacus-store/tree/feature/week1unit5customizingRoutes
+
 https://stackblitz.com/github/richard-romanowski/spartacus-store/tree/feature/week1unit6using-router-links
 
 
