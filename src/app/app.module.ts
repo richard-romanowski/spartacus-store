@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
+import { AboutComponent } from './about/about.component';
 import { AppComponent } from './app.component';
 import { translations, translationChunksConfig } from '@spartacus/assets';
 import { B2cStorefrontModule } from '@spartacus/storefront';
@@ -56,6 +58,6 @@ import { RecentlyBoughtComponent } from './recently-bought/recently-bought.compo
     { provide: PRODUCT_NORMALIZER, useClass: ProductNameNormalizer, multi: true },
     { provide: PRODUCT_NORMALIZER, useClass: ProductCategoryNormalizer, multi: true },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AboutComponent]
 })
 export class AppModule { }
