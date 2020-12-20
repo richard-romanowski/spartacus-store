@@ -56,15 +56,8 @@ const STATIC_ROUTES: Routes = [
       routing: {
         routes: {
           product: {
-            paths: [
-              'oldshool/cameras/:twoCategories/:productCode/:name/:manufacturer',
-              'oldshool/cameras/:allCategories/:manufacturer/:productCode/:name',
-              'oldshool/cameras/:firstCategory/:manufacturer/:productCode/:name',
-              'oldshool/cameras/:manufacturer/:productCode/:name',
-              'oldshool/cameras/:productCode/:name',
-              'oldshool/cameras/:productCode'
-            ],
-            paramsMapping: { name: 'nameForUrl' }
+            paramsMapping: { uglyName: 'name' },
+            paths: ['prod/:productCode/cool/:uglyName', 'p/:productCode/:uglyName', 'prod/:productCode']
           }
         }
       }
